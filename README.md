@@ -7,12 +7,12 @@ Expat Connection will be an app for expatriates (a person who lives outside of t
 ![ERD](./app/assets/images/Wireframe0_ERD.png)
 
 ####Wireframes
-![Wireframe1](./app/assets/images/assets/Wireframe1_login.png)
-![Wireframe1](./app/assets/images/Wireframe2_signup.png)
-![Wireframe1](./app/assets/images/Wireframe3_indexhome.png)
-![Wireframe1](./app/assets/images/Wireframe4_newpost.png)
-![Wireframe1](./app/assets/images/Wireframe5_showpost.png)
-![Wireframe1](./app/assets/images/Wireframe6_userprofs.png)
+![Wireframe1](./app/assets/images/Wireframe1_login.png)
+![Wireframe2](./app/assets/images/Wireframe2_signup.png)
+![Wireframe3](./app/assets/images/Wireframe3_indexhome.png)
+![Wireframe4](./app/assets/images/Wireframe4_newpost.png)
+![Wireframe5](./app/assets/images/Wireframe5_showpost.png)
+![Wireframe6](./app/assets/images/Wireframe6_userprofs.png)
 
 ####Check out the user stories for this game on my [Trello](https://trello.com/b/Gc2KbHP5/wdi-sm-43-project-2)!
 
