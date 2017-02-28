@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "You have successfully joined the Expat Connection Community!"
-      redirect_to root_path
+      redirect_to posts_path
     else
       flash.now.alert = "Oops, couldn't create account. Please make sure you are using a valid email and password and try again."
       render :new

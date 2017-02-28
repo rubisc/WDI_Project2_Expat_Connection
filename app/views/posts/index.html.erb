@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h2>Post Feed</h2>
 
 <% @posts.each do |post| %>
@@ -19,7 +17,7 @@
   <p>
     <%= "Theme:" %>
     <%= post.theme %> </p>
-    
+
   <%= link_to 'See more details', post %>
   <%= link_to 'Edit', edit_post_path(post) if current_user == post.user %> |
   <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } if current_user == post.user %>
