@@ -4,15 +4,40 @@
 
 
         <p><%= @post.title %></p>
-        <p><%= @post.city %></p>
-        <p><%= @post.venue %></p>
-        <p><%= @post.address %></p>
-        <p><%= @post.date %></p>
-        <p><%= @post.start_hour %></p>
-        <p><%= @post.end_hour %></p>
-        <p><%= @post.theme %></p>
-        <p><%= @post.body %></p>
-        <p><%= link_to 'Edit', edit_post_path(@post) %></p>
+
+        <p>
+          <%= "City:" %>
+          <%= @post.city %></p>
+
+        <p>
+          <%= "Venue:" %>
+          <%= @post.venue %></p>
+
+        <p>
+          <%= "Address:" %>
+          <%= @post.address %></p>
+
+        <p>
+          <%= "Date of event:" %>
+          <%= @post.date %></p>
+
+        <p>
+          <%= "Event starts at:" %>
+          <%= @post.start_hour %></p>
+
+        <p>
+          <%= "Event ends at:" %>
+          <%= @post.end_hour %></p>
+
+        <p>
+          <%= "Theme:" %>
+          <%= @post.theme %></p>
+
+        <p>
+          <%= "Body:" %>
+          <%= @post.body %></p>
+
+        <p><%= link_to 'Edit', edit_post_path(@post) if current_user == @post.user %></p>
         <p><%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } if current_user == @post.user %></p>
 
 <%= link_to 'Back to all posts', posts_path %>
