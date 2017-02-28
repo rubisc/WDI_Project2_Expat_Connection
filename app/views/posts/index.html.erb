@@ -1,1 +1,17 @@
-Here is where all Posts will appear! 
+Here is where all Posts will appear!
+
+<p id="notice"><%= notice %></p>
+
+<h3>Post Feed</h3>
+
+<% @posts.each do |post| %>
+  <h4> <%= post.title %> </h4>
+  <p> <%= post.city %> </p>
+  <p> <%= post.venue %> </p>
+  <p> <%= post.date %> </p>
+  <p> <%= post.theme %> </p>
+  <%= link_to 'See more details', post %>
+  <%= link_to 'Edit', edit_post_path(post) %> |
+  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } if current_user == post.user %>
+
+<% end %>

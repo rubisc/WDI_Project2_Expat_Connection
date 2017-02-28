@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+ <!-- Place a header saying that it is post with title whatever by user  -->
+
+
+        <p><%= @post.title %></p>
+        <p><%= @post.city %></p>
+        <p><%= @post.venue %></p>
+        <p><%= @post.address %></p>
+        <p><%= @post.date %></p>
+        <p><%= @post.start_hour %></p>
+        <p><%= @post.end_hour %></p>
+        <p><%= @post.theme %></p>
+        <p><%= @post.body %></p>
+        <p><%= link_to 'Edit', edit_post_path(@post) %></p>
+        <p><%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } if current_user == @post.user %></p>
+
+<%= link_to 'Back to all posts', posts_path %>
