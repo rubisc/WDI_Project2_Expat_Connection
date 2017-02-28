@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :posts
-  # has_many :comments
+  has_many :comments
   validates :name,  presence: true, length: { maximum: 40 }
   validates :email, presence: true, length: { maximum: 50 },
             uniqueness: true
