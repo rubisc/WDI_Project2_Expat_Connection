@@ -40,12 +40,19 @@
           Posted by <%= @post.user.name %>
           <%= time_ago_in_words(@post.created_at) %> ago
 
+<!-- links to edit or delete, assuming you are the user that created the post  -->
+
         <p><%= link_to 'Edit', edit_post_path(@post) if current_user == @post.user %></p>
         <p><%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } if current_user == @post.user %></p>
 
+  <!-- New Comment: -->
+
+  <%= render 'comments/form' %>
         <ul>
           <% @post.comments.each do |comment| %>
-          <li> <%= comment.body %> </li>
+          <li>
+            <%= comment.body %>
+          </li>
           <% end %>
         </ul>
 

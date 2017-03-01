@@ -1,6 +1,9 @@
-<% form_for [@post, @comment] do |f| %>
+<%= form_for [@post, @comment] do |f| %>
+  <% f.label :body  %>
 
-<%= form_for @comment do |f| %>
-<%= f.text_area :body %>
-  <%= f.submit %>
-  <% end %>
+  <%= f.text_area :body %>
+  <br />
+  <%= f.submit "Leave a comment"%>
+</div>
+</form>
+<% end %>
