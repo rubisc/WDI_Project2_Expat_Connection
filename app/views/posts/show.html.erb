@@ -1,44 +1,47 @@
-<p id="notice"><%= notice %></p>
-
- <!-- Place a header saying that it is post with title whatever by user  -->
-
-
-        <p><%= @post.title %></p>
+  <h4><%= @post.title %></h4>
 
         <p>
           <%= "City:" %>
-          <%= @post.city %></p>
+          <%= @post.city %>
+        </p>
 
         <p>
           <%= "Venue:" %>
-          <%= @post.venue %></p>
+          <%= @post.venue %>
+        </p>
 
         <p>
           <%= "Address:" %>
-          <%= @post.address %></p>
+          <%= @post.address %>
+        </p>
 
         <p>
           <%= "Date of event:" %>
-          <%= @post.date %></p>
+          <%= @post.date.strftime("%B %-d, %Y") %>
+        </p>
 
         <p>
           <%= "Event starts at:" %>
-          <%= @post.start_hour %></p>
+          <%= @post.start_hour.strftime("%I:%M %P") %>
+        </p>
 
         <p>
           <%= "Event ends at:" %>
-          <%= @post.end_hour %></p>
+          <%= @post.end_hour.strftime("%I:%M %P") %>
+        </p>
 
         <p>
           <%= "Theme:" %>
-          <%= @post.theme %></p>
+          <%= @post.theme %>
+        </p>
 
         <p>
           <%= "Description/Body:" %>
-          <%= @post.body %></p>
+          <%= @post.body %>
+        </p>
 
-          Posted by <%= @post.user.name %>
-          <%= time_ago_in_words(@post.created_at) %> ago
+          Posted by <%= @post.user.name %> at
+          <%= @post.created_at.strftime("%B %-d %Y, %I:%M %P") %>
 
 <!-- links to edit or delete, assuming you are the user that created the post  -->
 
@@ -51,6 +54,8 @@
         <ul>
           <% @post.comments.each do |comment| %>
           <li>
+            <%= comment.user.name %> commented the following
+            <%= time_ago_in_words(comment.created_at) %> ago:
             <%= comment.body %>
           </li>
           <% end %>

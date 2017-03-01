@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
      else
-       render :new
+       render :new, notice: "Please make sure your post is no more than 500 characters"
     end
   end
 
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @comment = Comment.new 
+    @comment = Comment.new
   end
 
   def update
