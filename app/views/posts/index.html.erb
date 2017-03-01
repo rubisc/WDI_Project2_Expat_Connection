@@ -18,6 +18,9 @@
     <%= "Theme:" %>
     <%= post.theme %> </p>
 
+    Posted by <%= post.user.name %>
+    <%= time_ago_in_words(post.created_at) %> ago
+
   <%= link_to 'See more details', post %>
   <%= link_to 'Edit', edit_post_path(post) if current_user == post.user %> |
   <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } if current_user == post.user %>

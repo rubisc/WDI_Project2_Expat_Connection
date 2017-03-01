@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     @user.email.downcase!
 
     if @user.save
+      session[:user_id] = @user.id.to_s
       flash[:notice] = "You have successfully joined the Expat Connection Community!"
       redirect_to posts_path
     else

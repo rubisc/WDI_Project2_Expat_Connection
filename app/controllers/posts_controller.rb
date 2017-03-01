@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(params.require(:post).permit(:title, :city, :venue, :address, :date, :start_hour, :end_hour, :theme, :body, :posted_by))
+    @post = current_user.posts.new(params.require(:post).permit(:title, :city, :venue, :address, :date, :start_hour, :end_hour, :theme, :body))
 
     if @post.save
       redirect_to posts_path
@@ -25,6 +25,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new 
   end
 
   def update

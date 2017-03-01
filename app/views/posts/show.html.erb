@@ -37,7 +37,16 @@
           <%= "Description/Body:" %>
           <%= @post.body %></p>
 
+          Posted by <%= @post.user.name %>
+          <%= time_ago_in_words(@post.created_at) %> ago
+
         <p><%= link_to 'Edit', edit_post_path(@post) if current_user == @post.user %></p>
         <p><%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } if current_user == @post.user %></p>
+
+        <ul>
+          <% @post.comments.each do |comment| %>
+          <li> <%= comment.body %> </li>
+          <% end %>
+        </ul>
 
 <%= link_to 'Back to all posts', posts_path %>
