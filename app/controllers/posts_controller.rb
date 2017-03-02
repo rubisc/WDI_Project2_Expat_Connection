@@ -14,7 +14,10 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
      else
-       render :new, notice: "Please make sure your post is no more than 500 characters"
+      #  flash[:danger] = "Please make sure your comment is no more than 300 characters"
+      #  redirect_to post_path(@post)
+       flash[:danger] = "Please make sure your post is no more than 500 characters"
+       redirect_to post_path(@post)
     end
   end
 

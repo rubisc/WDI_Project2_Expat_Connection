@@ -7,7 +7,8 @@ def create
   if @comment.save
     redirect_to post_path(@post)
   else
-    redirect_to post_path(@post), notice: "Please make sure your comment is no more than 300 characters"
+    flash[:danger] = "Please make sure your comment is no more than 300 characters"
+    redirect_to post_path(@post)
 end
 end
 

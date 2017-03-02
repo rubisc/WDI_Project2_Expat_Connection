@@ -22,5 +22,5 @@ validates_attachment_content_type :profile_photo, content_type: /\Aimage\/.*\Z/
   validates :email, presence: true, length: { maximum: 50 },
             uniqueness: true
   has_secure_password
-  validates :password, presence: true, length: { minimum: 7 }
+  #validates :password, presence: true, length: { minimum: 7 }
 end

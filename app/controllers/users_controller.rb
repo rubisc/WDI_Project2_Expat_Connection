@@ -24,12 +24,15 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
+    redirect_to users_path unless @user == current_user
   end
 
   def show
   end
 
   def update
+    @user = User.find(params[:id])
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -40,6 +43,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    session.delete(:user_id)
+    @user = User.find(params[:id])
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully deleted.' }
@@ -54,6 +59,6 @@ private
   def user_params
     # strong parameters - whitelist of allowed fields #=> permit(:name, :email, ...)
     # that can be submitted by a form to the user model #=> require(:user)
-    params.require(:user).permit(:name, :email, :password, :age, :home_city, :home_country, :current_city, :primary_language, :second_language, :third_language, :bio)
+    params.require(:user).permit(:name, :profile_photo, :email, :password, :age, :home_city, :home_country, :current_city, :language, :second_language, :third_language, :bio)
   end
 end
