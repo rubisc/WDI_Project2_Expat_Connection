@@ -1,0 +1,51 @@
+<h4> <%= @user.name %> </h4>
+<p>
+  <%= image_tag @user.profile_photo.url(:thumb) %>
+</p>
+
+<p>
+  <%= "Age: " %>
+  <%= @user.age %>
+</p>
+
+<p>
+  <%= "Home city: " %>
+  <%= @user.home_city %>
+</p>
+
+<p>
+  <%= "Home Country: " %>
+  <%= @user.home_country %>
+</p>
+
+<p>
+  <%= "Current city: " %>
+  <%= @user.current_city %>
+</p>
+
+<p>
+  <%= "Language : " %>
+  <%= @user.language %>
+</p>
+
+<p>
+  <%= "Second language : " %>
+  <%= @user.second_language %>
+</p>
+
+<p>
+  <%= "Third language : " %>
+  <%= @user.third_language %>
+</p>
+
+<p>
+  <%= "Bio : " %>
+  <%= @user.bio %>
+</p>
+
+  Joined Expat Community <%= time_ago_in_words(@user.created_at) %> ago
+
+  <%= link_to 'Edit', edit_user_path(@user) if @user == current_user %> |
+  <%= link_to 'Delete', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' } if @∫user == current_user %>
+
+<%= link_to "Back to all users!", users_path %>
