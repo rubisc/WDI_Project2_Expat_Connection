@@ -29,12 +29,12 @@ Expat Connection is an app for expatriates (a person who lives outside of their 
 Three main models will be used to reach the MVP for this app: User, Post, and Comment. The main model will be posts, as it will be the main thing bringing users together. Users will have an optional field to fill in regarding event location/hours/theme in case they are planning to get together at a certain place for whatever purpose they wish. Users will be able to enter some facts about themselves a log with a bio in order for other users to learn about them. Comments will be enabled with a date & timestamp so that users are aware of how relevant/current they are.
 
 
-####Stretch Goals & Unsolved Problems
+####Unsolved Problems
 The following features will be added on future iterations of this app:
 
-+ Like posts
-+ Like comments
 + Edit, update, and delete comments
++ Like comments
++ Like posts
 + Filter users by current city/home city/home country/language
 + On posts, choose from a dropdown of themes including:
 	+ Food
