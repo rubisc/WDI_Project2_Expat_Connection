@@ -53,9 +53,13 @@ The following features will be added on future iterations of this app:
 ####Installation Instructions
 `
 1) Clone the repository
+<br>
 2) Open app directory
+<br>
 3) Install gems
-4) Open Rails server.
+<br>
+4) Open Rails server
+<br>
 5) In browser open: localhost:3000
 `
 
