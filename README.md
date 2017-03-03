@@ -51,16 +51,11 @@ The following features will be added on future iterations of this app:
 
 
 ####Installation Instructions
-`
-1) Clone the repository
-<br>
-2) Open app directory
-<br>
-3) Install gems
-<br>
-4) Open Rails server
-<br>
-5) In browser open: localhost:3000
-`
+
++ Clone the repository
++ Open app directory
++ Install gems
++ Open Rails server
++ In browser open: localhost:3000
 
 ####Link to Github Repo: [Github Repo] (https://github.com/rubisc/WDI_Project2_Expat_Connection)
