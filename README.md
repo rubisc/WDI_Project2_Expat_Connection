@@ -58,4 +58,5 @@ The following features will be added on future iterations of this app:
 + Open Rails server
 + In browser open: localhost:3000
 
-####Link to Github Repo: [Github Repo] (https://github.com/rubisc/WDI_Project2_Expat_Connection)
+####Link to App on Heroku
+(https://expat-connection.herokuapp.com/)
