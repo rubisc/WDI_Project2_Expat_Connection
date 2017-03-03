@@ -1,7 +1,7 @@
 #Expat Connection
 
 ####Intro
-Expat Connection is an app for expatriates (a person who lives outside of their native country) to connect with other expats in their area. This app is intended for users to publish posts in order to find other people from a common home city/country and/or current city and/or language(s) to find each other and form friendships and build a community. In these posts, users will be able to publish comments to interact with other users; users may also post events to meet up with other members.
+Expat Connection is an app for expatriates (a person who lives outside of their native country) to connect with other expats in their area. This app is intended for users to publish posts in order to find other people from a common home city/country and/or current city and/or language(s) to find each other and form friendships and build a community. In these posts, users are able to publish comments to interact with other users; users may also post events to meet up with other members.
 
 ####ERD
 ![ERD](./app/assets/images/Wireframe0_ERD.png)
