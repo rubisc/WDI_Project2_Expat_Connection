@@ -59,4 +59,4 @@ The following features will be added on future iterations of this app:
 + In browser open: localhost:3000
 
 ####Link to App on Heroku
-(https://expat-connection.herokuapp.com/)
+https://expat-connection.herokuapp.com/
