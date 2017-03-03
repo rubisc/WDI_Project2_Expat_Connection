@@ -1,6 +1,21 @@
-<h1>Sign up and become a member of Expat Connection!</h1>
-<h4>You don't have to be an expat! Come meet friends from all over. </h4>
 
+<% if current_user.nil? %>
+<%= render 'partials/about'  %>
+<% else %>
+<div class="jumbotron">
+  <%= "You already know all about us, silly" %>
+  <div class="world-image">
+  <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6q-VNo3QBxBym4vW141oAKy5stCJH8ScVRvL5-396u4x4AuZz' %>
+  </div>
+</div>
+<% end %>
+
+<% if current_user.nil? %>
+<div class="sign-up-header">
+<h1>Sign up to meet friends from all over</h1>
+</div>
+
+<div class="sign-up-form">
 <%= form_for @user do |f| %>
   <div>
     <%= f.label :name %>
@@ -16,6 +31,7 @@
     <%= f.label :password %>
     <%= f.password_field :password %>
   </div>
+  <br />
   <div>
     <%= f.label :confirm_password %>
     <%= f.password_field :confirm_password %>
@@ -69,4 +85,6 @@
   <div>
     <%= f.submit "Sign me up!" %>
   </div>
+  </div>
+<% end %>
 <% end %>
