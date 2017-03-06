@@ -22,7 +22,6 @@ validates_attachment_content_type :profile_photo, content_type: /\Aimage\/.*\Z/
   validates :email, presence: true, length: { maximum: 50 },
             uniqueness: true
   has_secure_password
-  # Comment out the below so that update and delete work.
   validates :password, presence: true, length: { minimum: 7 }, if: :should_validate?
   def should_validate?
     new_record? || password.present?
